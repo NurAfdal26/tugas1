@@ -1,0 +1,18 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Prodi extends Model
+{
+    protected $fillable=['kd_prodi','nm_prodi'];
+
+    public function dosens(){
+    	return $this->hasMany('App\Dosen','id_prodi','id');
+    }
+
+    public function dosen1(){
+    	return $this->hasMany('App\Dosen','id_prodi','id');
+    }
+}
